@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // スクロールビューがドラッグが開始されると、キーボードが閉じられるように設定
-        scrollView.keyboardDismissMode = .onDrag
+//        // スクロールビューがドラッグが開始されると、キーボードが閉じられるように設定
+//        scrollView.keyboardDismissMode = .onDrag
 
         // 全てのテキストフィールドのデリゲートになる
         for textField in textFields {
@@ -49,8 +49,8 @@ extension ViewController {
         // キーボードが登場する時のイベントハンドラーを登録する
         notification.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 
-        // キーボードが退場した時のイベントハンドラーを登録する
-        notification.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        // キーボードが退場する時のイベントハンドラーを登録する
+        notification.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     /// キーボードのサイズが変化すると実行されるイベントハンドラー。
@@ -90,7 +90,7 @@ extension ViewController {
     }
 
     /// キーボードが退場する通知を受けると実行されるイベントハンドラー。
-    @objc private func keyboardDidHide(_ notification: Notification) {
+    @objc private func keyboardWillHide(_ notification: Notification) {
         // スクロール量をキーボードが登場する前の位置に戻す
         scrollView.setContentOffset(CGPoint(x: 0, y: lastOffsetY), animated: true)
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +38,7 @@
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                         </attributes>
                                                                     </fragment>
-                                                                    <fragment content="テキストフィールドをタッチすると、キーボードの上辺に合わせてテキストフィールドがスクロールします。">
+                                                                    <fragment content="テキストフィールドにカーソルが当たると、キーボードの上辺に合わせてテキストフィールドがスクロールします。">
                                                                         <attributes>
                                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                             <font key="NSFont" size="17" name="HiraginoSans-W3"/>
@@ -57,7 +57,7 @@
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                         </attributes>
                                                                     </fragment>
-                                                                    <fragment content="入力を完了するか、キーボードの外側をタッチすると、キーボードが下がるのに合わせて、テキストフィールドが元の位置にスクロールします。">
+                                                                    <fragment content="入力を完了すると、キーボードが下がるのに合わせて、テキストフィールドが元の位置にスクロールします。">
                                                                         <attributes>
                                                                             <font key="NSFont" size="17" name="HiraginoSans-W3"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -168,12 +168,16 @@
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="5aW-hn-vDk" secondAttribute="bottom" constant="40" id="5mI-9J-SBH"/>
                                             <constraint firstItem="5aW-hn-vDk" firstAttribute="leading" secondItem="ABm-Yx-iav" secondAttribute="leading" constant="16" id="Mf6-NH-OD0"/>
                                             <constraint firstItem="5aW-hn-vDk" firstAttribute="top" secondItem="ABm-Yx-iav" secondAttribute="top" constant="16" id="agE-Di-bTO"/>
                                             <constraint firstAttribute="trailing" secondItem="5aW-hn-vDk" secondAttribute="trailing" constant="16" id="jGA-Rz-LiM"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cDT-H6-iKS" appends="YES" id="UtN-zl-dKV"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -196,9 +200,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cbz-hA-RYw" secondAttribute="trailing" id="SsH-Go-h9L"/>
                             <constraint firstItem="Cbz-hA-RYw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ucg-CK-Ixe"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="cDT-H6-iKS" appends="YES" id="It1-2e-UZs"/>
-                        </connections>
                     </view>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
