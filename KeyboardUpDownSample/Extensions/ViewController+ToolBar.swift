@@ -5,6 +5,9 @@
 //  Created by Miharu Naruse on 2020/11/15.
 //
 
+// 参考元サイト
+// - URL:: https://stackoverflow.com/questions/14148276/toolbar-with-previous-and-next-for-keyboard-inputaccessoryview
+
 import Foundation
 import UIKit
 
