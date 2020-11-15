@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         }
         // テキストフィールドとキーボード関連の処理について、通知センターの設定をする。
         setNotificationCenter()
+        
+        // 対象のテキストフィールドがアクティブなとき、キーボードのツールバーに、前後ボタンや完了ボタンを設定する。
+        addPreviousNextableDoneButtonOnKeyboard(textFields: textFields, previousNextable: true)
     }
 }
 
