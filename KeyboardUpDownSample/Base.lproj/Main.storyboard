@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardUpDownSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbz-hA-RYw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1036"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1256"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABm-Yx-iav">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1274"/>
@@ -189,16 +189,44 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Cbz-hA-RYw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FqZ-lb-Uf8"/>
                             <constraint firstAttribute="bottom" secondItem="Cbz-hA-RYw" secondAttribute="bottom" id="NH6-d9-nj6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cbz-hA-RYw" secondAttribute="trailing" id="SsH-Go-h9L"/>
                             <constraint firstItem="Cbz-hA-RYw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ucg-CK-Ixe"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cDT-H6-iKS" appends="YES" id="It1-2e-UZs"/>
+                        </connections>
                     </view>
-                    <size key="freeformSize" width="414" height="1080"/>
+                    <size key="freeformSize" width="414" height="1300"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Cbz-hA-RYw" id="CTc-KJ-dOs"/>
+                        <outletCollection property="textFields" destination="mVR-nB-xqu" collectionClass="NSMutableArray" id="3dj-Hl-EhL"/>
+                        <outletCollection property="textFields" destination="eKs-8o-Mtg" collectionClass="NSMutableArray" id="mnc-uF-sMk"/>
+                        <outletCollection property="textFields" destination="L6G-Ku-S8f" collectionClass="NSMutableArray" id="4v2-nS-V8Z"/>
+                        <outletCollection property="textFields" destination="dlV-UA-Ku4" collectionClass="NSMutableArray" id="muA-Kf-P8P"/>
+                        <outletCollection property="textFields" destination="RSa-e2-dfA" collectionClass="NSMutableArray" id="BPT-07-cMX"/>
+                        <outletCollection property="textFields" destination="T7U-J0-ybX" collectionClass="NSMutableArray" id="eb7-Sz-xXU"/>
+                        <outletCollection property="textFields" destination="xeg-rk-TRB" collectionClass="NSMutableArray" id="G4g-y6-Uwf"/>
+                        <outletCollection property="textFields" destination="cSJ-oS-1Me" collectionClass="NSMutableArray" id="btm-Pq-hjS"/>
+                        <outletCollection property="textFields" destination="UTN-NL-emB" collectionClass="NSMutableArray" id="ShE-Yx-kUG"/>
+                        <outletCollection property="textFields" destination="6d7-Sf-26p" collectionClass="NSMutableArray" id="jqo-nh-BLU"/>
+                        <outletCollection property="textFields" destination="PtC-LC-XOf" collectionClass="NSMutableArray" id="c09-p7-F1G"/>
+                        <outletCollection property="textFields" destination="awq-ne-VcV" collectionClass="NSMutableArray" id="6Kf-3A-ugH"/>
+                        <outletCollection property="textFields" destination="iBh-Ay-n2q" collectionClass="NSMutableArray" id="Gcy-QT-kQH"/>
+                        <outletCollection property="textFields" destination="gAb-WX-hK9" collectionClass="NSMutableArray" id="162-ro-2Zh"/>
+                        <outletCollection property="textFields" destination="Z4v-5v-hbs" collectionClass="NSMutableArray" id="F0I-I9-F5I"/>
+                        <outletCollection property="textFields" destination="0k8-rg-KnL" collectionClass="NSMutableArray" id="20v-xy-4sL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cDT-H6-iKS">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="HEJ-YL-fOD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
