@@ -1,6 +1,8 @@
 # KeyboardUpDownSample
 **KeyboardUpDownSample** is a sample for a text field scrolls to match the top edge of the keyboard.
 
+<img src="https://github.com/mnaruse/KeyboardUpDownSample/blob/main/sources/icon.png" width="50%">
+
 ## Image
 
 <img src="https://github.com/mnaruse/KeyboardUpDownSample/blob/main/sources/keyboardupdownsample.gif" width="30%">
